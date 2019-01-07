@@ -1,4 +1,5 @@
 /*
+
 Stored Procedures Used to Grant/Revoke Privileges on Activated Repository Objects
 Stored procedures, which exist in the _SYS_REPO schema, are used to grant and revoke privileges on activated modeled objects, analytic privileges, application privileges, and roles.
 
@@ -25,6 +26,7 @@ This does not apply to the procedures GRANT_ACTIVATED_ROLE and REVOKE_ACTIVATED_
 CALL GRANT_ACTIVATED_ROLE ('acme.com.data::MyUserRole','User')
 
 For all procedures, the user or role to whom/from whom a privilege or role is being granted/revoked must not be enclosed between double quotes.
+
 */
 
 SELECT 'CALL GRANT_PRIVILEGE_ON_ACTIVATED_CONTENT(''SELECT'',''"'||"SCHEMA_NAME"||'"."'||"OBJECT_NAME"||'"'',''EXT_SAP_SAC01'');' AS GRANT_STMT
